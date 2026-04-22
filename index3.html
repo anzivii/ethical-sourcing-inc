@@ -12,22 +12,25 @@
 </div>
 
 <script>
+    import {companies} from 'data-set.js';
+    console.log(companies);
+
   const searchInput = document.getElementById('searchInput');
   const suggestionsBox = document.getElementById('suggestions');
 
-  const data = [
-    "Apple",
-    "Banana",
-    "Blueberry",
-    "Cherry",
-    "Grapes",
-    "Mango",
-    "Orange",
-    "Peach",
-    "Pineapple",
-    "Strawberry",
-    "Watermelon"
-  ];
+//   const data = [
+//     "Apple",
+//     "Banana",
+//     "Blueberry",
+//     "Cherry",
+//     "Grapes",
+//     "Mango",
+//     "Orange",
+//     "Peach",
+//     "Pineapple",
+//     "Strawberry",
+//     "Watermelon"
+//   ];
 
   searchInput.addEventListener('input', function () {
     const input = this.value.toLowerCase();
@@ -38,8 +41,8 @@
       return;
     }
 
-    const filtered = data.filter(item =>
-      item.toLowerCase().includes(input)
+    const filtered = companies.filter(item =>
+      item.name.toLowerCase().includes(input)
     );
 
     if (filtered.length === 0) {
@@ -73,3 +76,4 @@
 
 </body>
 </html>
+

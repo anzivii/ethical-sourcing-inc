@@ -1,4 +1,4 @@
-const companies = [
+export const companies = [
      { name: "Microsoft", rating: 92, sector: "Software" },
      { name: "Salesforce", rating: 91, sector: "Software" },
      { name: "SAP", rating: 90, sector: "Software" },
