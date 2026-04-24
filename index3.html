@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Search with Suggestions</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 
@@ -12,25 +13,25 @@
 </div>
 
 <script>
-    import {companies} from 'data-set.js';
-    console.log(companies);
+  import {companies} from './dataset.js';
+  console.log(companies);
 
   const searchInput = document.getElementById('searchInput');
   const suggestionsBox = document.getElementById('suggestions');
 
-//   const data = [
-//     "Apple",
-//     "Banana",
-//     "Blueberry",
-//     "Cherry",
-//     "Grapes",
-//     "Mango",
-//     "Orange",
-//     "Peach",
-//     "Pineapple",
-//     "Strawberry",
-//     "Watermelon"
-//   ];
+  // const data = [
+  //   "Apple",
+  //   "Banana",
+  //   "Blueberry",
+  //   "Cherry",
+  //   "Grapes",
+  //   "Mango",
+  //   "Orange",
+  //   "Peach",
+  //   "Pineapple",
+  //   "Strawberry",
+  //   "Watermelon"
+  // ];
 
   searchInput.addEventListener('input', function () {
     const input = this.value.toLowerCase();
