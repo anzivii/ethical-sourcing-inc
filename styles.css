@@ -1,22 +1,29 @@
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
-      justify-content: center;
-      margin-top: 100px;
-      background: rgb(136, 182, 136);
+      flex-direction: column;
+      align-items: center;
+      margin: 0;                 /* remove big top gap */
+      gap: 50px;
+      padding-top: 40px;         /* controlled spacing from top */
+      background: linear-gradient(135deg, #7fb37f, #6aa56a); /* nicer bg */
     }
 
     .search-container {
       position: relative;
-      width: 300px;
+      width: 320px;
+      align-self: flex-end;   /* pushes it right */
+      margin-right: 80px;     /* adjust this */
     }
 
     input {
       width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      padding: 12px 14px;
+      font-size: 15px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     .suggestions {
@@ -47,12 +54,67 @@
     box-shadow: 0 4px 8px rgb(244, 241, 241);
   }
 
-.result-container {
-  width: 300px;
-  margin: 20px auto;
-  padding: 15px;
-  border-radius: 8px;
-  background: white;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  display: none;
+  .result-container {
+    width: 60%;         
+    max-width: 700px;
+    min-width: 320px;
+    gap: 30px;
+  
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 14px;
+
+    background: #dff5df;  
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+
+    display: block;
+    border: 2px solid rgb(74, 157, 111);
+  }
+
+  .result-container h3 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #1f3d1f;
+  }
+
+  .result-container p {
+    line-height: 1.6;
+    font-size: 15px;
+    color: #2e4d2e;
+  }
+  .result-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+  }
+  .main-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.details-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+.details-box h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.other-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+.other-box h4 {
+  margin-top: 0;
 }

@@ -9,6 +9,15 @@ input.addEventListener("input", showSuggestions);
 
 function showSuggestions() {
   const query = input.value.toLowerCase();
+
+   if (!query) {
+    suggestions.style.display = "none";
+    return;
+  }
+
+  suggestions.innerHTML = "";
+  suggestions.style.display = "block";
+
   suggestions.innerHTML = "";
   suggestions.style.display = "block";
 
@@ -27,11 +36,26 @@ function showSuggestions() {
 
       // SHOW RESULT BOX
       resultContainer.style.display = "block";
-      resultContainer.innerHTML = `
+    resultContainer.innerHTML = `
+      <div class="main-box">
         <h3>${company.name}</h3>
         <p><strong>Sector:</strong> ${company.sector}</p>
         <p><strong>Rating:</strong> ${company.rating}</p>
-      `;
+      </div>
+
+      <div class="details-box">
+        <h4>Additional Insights</h4>
+        <p><strong>HRDD Tier:</strong> ${company.hrdd}</p>
+        <p><strong>Child/Forced Labor Risk:</strong> ${company.laborRisk}</p>
+        <p><strong>Sustainability:</strong> ${company.sustainability}</p>
+      </div>
+
+      <div class ="other-box">
+        <h4>Summary and Explanation</h4>
+        <p><strong>Summary:</strong> ${company.summary}</p>
+        <p><strong>Explanation:</strong> ${company.explanation}</p>
+      </div>
+    `;
     });
 
     suggestions.appendChild(div);
