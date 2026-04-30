@@ -63,8 +63,26 @@ function showSuggestions() {
 }
 
 // hide dropdown + results when clicking outside
-document.addEventListener("click", (e) => {
-  if (!e.target.closest(".search-container")) {
-    suggestions.style.display = "none";
-  }
+div.addEventListener("click", () => {
+  input.value = company.name;
+  suggestions.style.display = "none";
 });
+
+
+
+function toggleDropdown() {
+  document.getElementById("dropdown").classList.toggle("show");
+}
+
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("show");
+}
+
+window.onclick = function(e) {
+  if (!e.target.matches('.dropdown-btn')) {
+    const dropdown = document.getElementById("dropdown");
+    if (dropdown.classList.contains('show')) {
+      dropdown.classList.remove('show');
+    }
+  }
+}
