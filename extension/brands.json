@@ -1,0 +1,862 @@
+{
+  "microsoft": {
+    "name": "Microsoft",
+    "sector": "Software",
+    "tier": "Leader",
+    "labor_risk": "Low",
+    "sustainability": "High",
+    "rating": 92,
+    "summary": "Global leader in software and cloud computing.",
+    "explanation": "High score due to strong climate commitments, transparency, and relatively strong labor practices."
+  },
+  "salesforce": {
+    "name": "Salesforce",
+    "sector": "Software",
+    "tier": "Leader",
+    "labor_risk": "Low",
+    "sustainability": "High",
+    "rating": 91,
+    "summary": "Cloud-based CRM platform widely used by businesses.",
+    "explanation": "High rating from strong workplace ethics, philanthropy, and ESG reporting."
+  },
+  "sap": {
+    "name": "SAP",
+    "sector": "Software",
+    "tier": "Leader",
+    "labor_risk": "Low",
+    "sustainability": "High",
+    "rating": 90,
+    "summary": "Enterprise software provider serving global corporations.",
+    "explanation": "Strong governance and regulatory compliance, especially under EU standards."
+  },
+  "unilever": {
+    "name": "Unilever",
+    "sector": "Consumer Goods",
+    "tier": "Leader",
+    "labor_risk": "Medium",
+    "sustainability": "High",
+    "rating": 85,
+    "summary": "Produces food, hygiene, and household products.",
+    "explanation": "High due to sustainability leadership, though still impacted by supply chain complexity."
+  },
+  "intel": {
+    "name": "Intel",
+    "sector": "Semiconductors",
+    "tier": "Strong",
+    "labor_risk": "Medium",
+    "sustainability": "Medium",
+    "rating": 78,
+    "summary": "Manufactures processors and chips for computers.",
+    "explanation": "Good governance but energy-intensive manufacturing lowers score."
+  },
+  "cisco": {
+    "name": "Cisco",
+    "sector": "Tech",
+    "tier": "Leader",
+    "labor_risk": "Low",
+    "sustainability": "Mediumâ€“High",
+    "rating": 88,
+    "summary": "Networking hardware and software company.",
+    "explanation": "Strong transparency and responsible sourcing boost rating."
+  },
+  "nvidia": {
+    "name": "NVIDIA",
+    "sector": "Semiconductors",
+    "tier": "Strong",
+    "labor_risk": "Medium",
+    "sustainability": "Medium",
+    "rating": 75,
+    "summary": "Designs GPUs for AI and gaming.",
+    "explanation": "Energy usage and supply chain concerns keep it mid-range."
+  },
+  "asml": {
+    "name": "ASML",
+    "sector": "Semiconductors",
+    "tier": "Strong",
+    "labor_risk": "Low",
+    "sustainability": "Medium",
+    "rating": 77,
+    "summary": "Produces chip-making machines.",
+    "explanation": "Strong governance but environmental costs from manufacturing."
+  },
+  "apple": {
+    "name": "Apple",
+    "sector": "Tech Hardware",
+    "tier": "Strong",
+    "labor_risk": "Mediumâ€“High",
+    "sustainability": "High",
+    "rating": 76,
+    "summary": "Designs consumer electronics like iPhones and Macs.",
+    "explanation": "Privacy strengths offset by supply chain labor concerns."
+  },
+  "ibm": {
+    "name": "IBM",
+    "sector": "Tech",
+    "tier": "Strong",
+    "labor_risk": "Low",
+    "sustainability": "Medium",
+    "rating": 83,
+    "summary": "Enterprise tech and consulting company.",
+    "explanation": "Strong governance and ethical AI initiatives improve score."
+  },
+  "adobe": {
+    "name": "Adobe",
+    "sector": "Software",
+    "tier": "Strong",
+    "labor_risk": "Low",
+    "sustainability": "Medium",
+    "rating": 84,
+    "summary": "Creator of digital media and design tools.",
+    "explanation": "Low environmental footprint and strong workplace practices."
+  },
+  "sony": {
+    "name": "Sony",
+    "sector": "Electronics",
+    "tier": "Moderate",
+    "labor_risk": "Medium",
+    "sustainability": "Medium",
+    "rating": 59,
+    "summary": "Produces electronics and entertainment content.",
+    "explanation": "Lower rating due to supply chain and environmental impact."
+  },
+  "qualcomm": {
+    "name": "Qualcomm",
+    "sector": "Semiconductors",
+    "tier": "Moderate",
+    "labor_risk": "Medium",
+    "sustainability": "Medium",
+    "rating": 58,
+    "summary": "Develops mobile chip technology.",
+    "explanation": "Legal disputes and competition concerns reduce rating."
+  },
+  "texas_instruments": {
+    "name": "Texas Instruments",
+    "sector": "Semiconductors",
+    "tier": "Moderate",
+    "labor_risk": "Medium",
+    "sustainability": "Medium",
+    "rating": 58,
+    "summary": "Manufactures analog and embedded chips.",
+    "explanation": "Environmental impact and limited ESG leadership."
+  },
+  "visa": {
+    "name": "Visa",
+    "sector": "Finance",
+    "tier": "Strong",
+    "labor_risk": "Low",
+    "sustainability": "Medium",
+    "rating": 74,
+    "summary": "Global payments processing network.",
+    "explanation": "Low direct footprint but typical finance-sector concerns."
+  },
+  "mastercard": {
+    "name": "Mastercard",
+    "sector": "Finance",
+    "tier": "Strong",
+    "labor_risk": "Low",
+    "sustainability": "Medium",
+    "rating": 74,
+    "summary": "International payments network.",
+    "explanation": "Similar strengths and concerns as Visa."
+  },
+  "l_or_al": {
+    "name": "L'OrÃ©al",
+    "sector": "Beauty",
+    "tier": "Strong",
+    "labor_risk": "Medium",
+    "sustainability": "Mediumâ€“High",
+    "rating": 73,
+    "summary": "Produces beauty and skincare products.",
+    "explanation": "Sustainability efforts balanced by sourcing concerns."
+  },
+  "equinix": {
+    "name": "Equinix",
+    "sector": "Tech Infrastructure",
+    "tier": "Moderate",
+    "labor_risk": "Low",
+    "sustainability": "Medium",
+    "rating": 68,
+    "summary": "Operates global data centers.",
+    "explanation": "High energy consumption impacts rating."
+  },
+  "danaher": {
+    "name": "Danaher",
+    "sector": "Healthcare Tech",
+    "tier": "Moderate",
+    "labor_risk": "Low",
+    "sustainability": "Medium",
+    "rating": 69,
+    "summary": "Provides life sciences and diagnostics tools.",
+    "explanation": "Useful products but standard governance/environment concerns."
+  },
+  "medtronic": {
+    "name": "Medtronic",
+    "sector": "Healthcare Tech",
+    "tier": "Moderate",
+    "labor_risk": "Medium",
+    "sustainability": "Medium",
+    "rating": 67,
+    "summary": "Develops medical devices.",
+    "explanation": "Pricing and regulatory scrutiny affect score."
+  },
+  "eli_lilly": {
+    "name": "Eli Lilly",
+    "sector": "Healthcare",
+    "tier": "Strong",
+    "labor_risk": "Low",
+    "sustainability": "High",
+    "rating": 73,
+    "summary": "Produces pharmaceutical drugs.",
+    "explanation": "Innovation offset by pricing concerns."
+  },
+  "sanofi": {
+    "name": "Sanofi",
+    "sector": "Healthcare",
+    "tier": "Strong",
+    "labor_risk": "Low",
+    "sustainability": "High",
+    "rating": 73,
+    "summary": "Global pharmaceutical company.",
+    "explanation": "Balanced by research benefits and pricing issues."
+  },
+  "roche": {
+    "name": "Roche",
+    "sector": "Healthcare",
+    "tier": "Strong",
+    "labor_risk": "Low",
+    "sustainability": "High",
+    "rating": 73,
+    "summary": "Focuses on diagnostics and drugs.",
+    "explanation": "Strong healthcare impact but cost concerns."
+  },
+  "novartis": {
+    "name": "Novartis",
+    "sector": "Healthcare",
+    "tier": "Strong",
+    "labor_risk": "Low",
+    "sustainability": "High",
+    "rating": 73,
+    "summary": "Develops global medicines.",
+    "explanation": "Governance and pricing controversies limit score."
+  },
+  "pfizer": {
+    "name": "Pfizer",
+    "sector": "Healthcare",
+    "tier": "Strong",
+    "labor_risk": "Low",
+    "sustainability": "Medium",
+    "rating": 70,
+    "summary": "Major drug manufacturer.",
+    "explanation": "Important medical contributions but pricing debates."
+  },
+  "johnson_johnson": {
+    "name": "Johnson & Johnson",
+    "sector": "Healthcare",
+    "tier": "Moderate",
+    "labor_risk": "Medium",
+    "sustainability": "Medium",
+    "rating": 55,
+    "summary": "Produces medical and consumer health products.",
+    "explanation": "Lawsuits and safety controversies lower rating."
+  },
+  "siemens": {
+    "name": "Siemens",
+    "sector": "Industrial",
+    "tier": "Moderate",
+    "labor_risk": "Medium",
+    "sustainability": "Medium",
+    "rating": 57,
+    "summary": "Industrial manufacturing and tech firm.",
+    "explanation": "Past governance issues affect rating."
+  },
+  "honeywell": {
+    "name": "Honeywell",
+    "sector": "Manufacturing",
+    "tier": "Moderate",
+    "labor_risk": "Medium",
+    "sustainability": "Medium",
+    "rating": 56,
+    "summary": "Produces industrial systems.",
+    "explanation": "Environmental and defense involvement concerns."
+  },
+  "nike": {
+    "name": "Nike",
+    "sector": "Apparel",
+    "tier": "Moderate",
+    "labor_risk": "High",
+    "sustainability": "Medium",
+    "rating": 39,
+    "summary": "Produces athletic clothing and footwear.",
+    "explanation": "Low due to labor and supply chain concerns."
+  },
+  "adidas": {
+    "name": "Adidas",
+    "sector": "Apparel",
+    "tier": "Moderate",
+    "labor_risk": "High",
+    "sustainability": "Medium",
+    "rating": 39,
+    "summary": "Global sportswear brand.",
+    "explanation": "Similar labor and sourcing issues as Nike."
+  },
+  "samsung": {
+    "name": "Samsung",
+    "sector": "Electronics",
+    "tier": "Moderate",
+    "labor_risk": "Medium",
+    "sustainability": "Medium",
+    "rating": 55,
+    "summary": "Produces electronics and appliances.",
+    "explanation": "Labor and governance issues reduce score."
+  },
+  "pepsico": {
+    "name": "PepsiCo",
+    "sector": "Food & Bev",
+    "tier": "Moderate",
+    "labor_risk": "High",
+    "sustainability": "Medium",
+    "rating": 38,
+    "summary": "Produces snacks and beverages.",
+    "explanation": "Health and environmental concerns."
+  },
+  "coca_cola": {
+    "name": "Coca-Cola",
+    "sector": "Food & Bev",
+    "tier": "Moderate",
+    "labor_risk": "High",
+    "sustainability": "Medium",
+    "rating": 38,
+    "summary": "Global beverage company.",
+    "explanation": "Plastic pollution and water usage issues."
+  },
+  "nestl": {
+    "name": "NestlÃ©",
+    "sector": "Food & Bev",
+    "tier": "Moderate",
+    "labor_risk": "High",
+    "sustainability": "Mediumâ€“Low",
+    "rating": 36,
+    "summary": "Produces packaged food and drinks.",
+    "explanation": "Major controversies around water and sourcing."
+  },
+  "mondelez": {
+    "name": "Mondelez",
+    "sector": "Food & Bev",
+    "tier": "Moderate",
+    "labor_risk": "High",
+    "sustainability": "Low",
+    "rating": 35,
+    "summary": "Snack food manufacturer.",
+    "explanation": "Environmental and sourcing concerns."
+  },
+  "starbucks": {
+    "name": "Starbucks",
+    "sector": "Food & Bev",
+    "tier": "Moderate",
+    "labor_risk": "High",
+    "sustainability": "Medium",
+    "rating": 37,
+    "summary": "Coffeehouse chain.",
+    "explanation": "Worker treatment and sourcing issues."
+  },
+  "diageo": {
+    "name": "Diageo",
+    "sector": "Alcohol",
+    "tier": "Moderate",
+    "labor_risk": "Medium",
+    "sustainability": "Medium",
+    "rating": 50,
+    "summary": "Produces alcoholic beverages.",
+    "explanation": "Social impact of alcohol affects score."
+  },
+  "est_e_lauder": {
+    "name": "EstÃ©e Lauder",
+    "sector": "Beauty",
+    "tier": "Moderate",
+    "labor_risk": "Medium",
+    "sustainability": "Medium",
+    "rating": 51,
+    "summary": "Beauty and skincare products.",
+    "explanation": "Moderate sustainability but sourcing concerns."
+  },
+  "ups": {
+    "name": "UPS",
+    "sector": "Logistics",
+    "tier": "Moderate",
+    "labor_risk": "Medium",
+    "sustainability": "Medium",
+    "rating": 52,
+    "summary": "Global shipping company.",
+    "explanation": "Labor and emissions concerns."
+  },
+  "fedex": {
+    "name": "FedEx",
+    "sector": "Logistics",
+    "tier": "Moderate",
+    "labor_risk": "Medium",
+    "sustainability": "Medium",
+    "rating": 52,
+    "summary": "Shipping and delivery services.",
+    "explanation": "Similar issues to UPS."
+  },
+  "target": {
+    "name": "Target",
+    "sector": "Retail",
+    "tier": "Moderate",
+    "labor_risk": "High",
+    "sustainability": "Low",
+    "rating": 34,
+    "summary": "Retail chain.",
+    "explanation": "Supply chain and labor concerns."
+  },
+  "cvs_health": {
+    "name": "CVS Health",
+    "sector": "Healthcare",
+    "tier": "Moderate",
+    "labor_risk": "Medium",
+    "sustainability": "Medium",
+    "rating": 54,
+    "summary": "Pharmacy and healthcare services.",
+    "explanation": "Pricing and policy concerns."
+  },
+  "verizon": {
+    "name": "Verizon",
+    "sector": "Telecom",
+    "tier": "Moderate",
+    "labor_risk": "Medium",
+    "sustainability": "Medium",
+    "rating": 54,
+    "summary": "Telecommunications provider.",
+    "explanation": "Privacy and regulatory issues."
+  },
+  "disney": {
+    "name": "Disney",
+    "sector": "Media",
+    "tier": "Moderate",
+    "labor_risk": "Medium",
+    "sustainability": "Medium",
+    "rating": 53,
+    "summary": "Entertainment and media company.",
+    "explanation": "Labor and political controversies."
+  },
+  "amazon": {
+    "name": "Amazon",
+    "sector": "Retail",
+    "tier": "Weak",
+    "labor_risk": "High",
+    "sustainability": "Mediumâ€“Low",
+    "rating": 30,
+    "summary": "E-commerce and cloud giant.",
+    "explanation": "Worker treatment and environmental impact."
+  },
+  "walmart": {
+    "name": "Walmart",
+    "sector": "Retail",
+    "tier": "Moderate",
+    "labor_risk": "High",
+    "sustainability": "Low",
+    "rating": 29,
+    "summary": "Largest global retailer.",
+    "explanation": "Labor practices and supply chain issues."
+  },
+  "tesla": {
+    "name": "Tesla",
+    "sector": "Automotive",
+    "tier": "Weakâ€“Moderate",
+    "labor_risk": "Mediumâ€“High",
+    "sustainability": "Medium",
+    "rating": 32,
+    "summary": "Electric vehicle manufacturer.",
+    "explanation": "Governance and workplace concerns."
+  },
+  "byd": {
+    "name": "BYD",
+    "sector": "Automotive",
+    "tier": "Weak",
+    "labor_risk": "High",
+    "sustainability": "Low",
+    "rating": 19,
+    "summary": "EV and battery producer.",
+    "explanation": "Transparency and labor/environment concerns."
+  },
+  "mcdonald_s": {
+    "name": "McDonald's",
+    "sector": "Food Service",
+    "tier": "Moderate",
+    "labor_risk": "High",
+    "sustainability": "Low",
+    "rating": 28,
+    "summary": "Fast-food chain.",
+    "explanation": "Health, labor, and environmental issues."
+  },
+  "home_depot": {
+    "name": "Home Depot",
+    "sector": "Retail",
+    "tier": "Moderate",
+    "labor_risk": "High",
+    "sustainability": "Low",
+    "rating": 33,
+    "summary": "Home improvement retailer.",
+    "explanation": "Supply chain and sustainability concerns."
+  },
+  "lowe_s": {
+    "name": "Lowe's",
+    "sector": "Retail",
+    "tier": "Moderate",
+    "labor_risk": "High",
+    "sustainability": "Low",
+    "rating": 33,
+    "summary": "Home improvement retailer.",
+    "explanation": "Similar issues as Home Depot."
+  },
+  "kraft_heinz": {
+    "name": "Kraft Heinz",
+    "sector": "Food & Bev",
+    "tier": "Weak",
+    "labor_risk": "High",
+    "sustainability": "Low",
+    "rating": 27,
+    "summary": "Packaged food company.",
+    "explanation": "Health and sourcing concerns."
+  },
+  "jpmorgan_chase": {
+    "name": "JPMorgan Chase",
+    "sector": "Finance",
+    "tier": "Moderate",
+    "labor_risk": "Low",
+    "sustainability": "Mediumâ€“Low",
+    "rating": 56,
+    "summary": "Major global bank.",
+    "explanation": "Financing controversial industries affects rating."
+  },
+  "goldman_sachs": {
+    "name": "Goldman Sachs",
+    "sector": "Finance",
+    "tier": "Moderate",
+    "labor_risk": "Low",
+    "sustainability": "Mediumâ€“Low",
+    "rating": 55,
+    "summary": "Investment banking firm.",
+    "explanation": "Governance and financial sector criticisms."
+  },
+  "morgan_stanley": {
+    "name": "Morgan Stanley",
+    "sector": "Finance",
+    "tier": "Moderate",
+    "labor_risk": "Low",
+    "sustainability": "Mediumâ€“Low",
+    "rating": 57,
+    "summary": "Investment bank and wealth manager.",
+    "explanation": "Slightly stronger ESG positioning."
+  },
+  "blackrock": {
+    "name": "BlackRock",
+    "sector": "Finance",
+    "tier": "Moderate",
+    "labor_risk": "Low",
+    "sustainability": "Mediumâ€“Low",
+    "rating": 54,
+    "summary": "Global asset manager.",
+    "explanation": "Criticism for fossil fuel investments."
+  },
+  "american_express": {
+    "name": "American Express",
+    "sector": "Finance",
+    "tier": "Moderate",
+    "labor_risk": "Low",
+    "sustainability": "Medium",
+    "rating": 58,
+    "summary": "Financial services company.",
+    "explanation": "Stable governance but sector concerns."
+  },
+  "tencent": {
+    "name": "Tencent",
+    "sector": "Tech",
+    "tier": "Weak",
+    "labor_risk": "Medium",
+    "sustainability": "Medium",
+    "rating": 19,
+    "summary": "Chinese tech and social platform giant.",
+    "explanation": "Data privacy and government ties."
+  },
+  "exxonmobil": {
+    "name": "ExxonMobil",
+    "sector": "Energy",
+    "tier": "Weak",
+    "labor_risk": "High",
+    "sustainability": "Low",
+    "rating": 18,
+    "summary": "Oil and gas producer.",
+    "explanation": "Climate impact and environmental damage."
+  },
+  "chevron": {
+    "name": "Chevron",
+    "sector": "Energy",
+    "tier": "Weak",
+    "labor_risk": "High",
+    "sustainability": "Low",
+    "rating": 18,
+    "summary": "Oil and gas company.",
+    "explanation": "Similar environmental concerns."
+  },
+  "rio_tinto": {
+    "name": "Rio Tinto",
+    "sector": "Mining",
+    "tier": "Weak",
+    "labor_risk": "High",
+    "sustainability": "Low",
+    "rating": 17,
+    "summary": "Global mining corporation.",
+    "explanation": "Environmental and cultural controversies."
+  },
+  "boeing": {
+    "name": "Boeing",
+    "sector": "Aerospace",
+    "tier": "Moderate",
+    "labor_risk": "Medium",
+    "sustainability": "Medium",
+    "rating": 52,
+    "summary": "Aircraft manufacturer.",
+    "explanation": "Safety and governance issues."
+  },
+  "philip_morris_international": {
+    "name": "Philip Morris International",
+    "sector": "Tobacco",
+    "tier": "Weak",
+    "labor_risk": "High",
+    "sustainability": "Low",
+    "rating": 12,
+    "summary": "Tobacco product manufacturer.",
+    "explanation": "Core product harms health."
+  },
+  "bridgestone": {
+    "name": "Bridgestone",
+    "sector": "Manufacturing",
+    "tier": "Weak",
+    "labor_risk": "High",
+    "sustainability": "Low",
+    "rating": 18,
+    "summary": "Tire manufacturer.",
+    "explanation": "Environmental and sourcing concerns."
+  },
+  "tata_motors": {
+    "name": "Tata Motors",
+    "sector": "Automotive",
+    "tier": "Weak",
+    "labor_risk": "High",
+    "sustainability": "Low",
+    "rating": 17,
+    "summary": "Automotive manufacturer.",
+    "explanation": "Environmental and governance concerns."
+  },
+  "icbc": {
+    "name": "ICBC",
+    "sector": "Finance",
+    "tier": "Weak",
+    "labor_risk": "High",
+    "sustainability": "Low",
+    "rating": 10,
+    "summary": "Chinese state-owned bank.",
+    "explanation": "Low transparency and governance concerns."
+  },
+  "china_construction_bank": {
+    "name": "China Construction Bank",
+    "sector": "Finance",
+    "tier": "Weak",
+    "labor_risk": "High",
+    "sustainability": "Low",
+    "rating": 10,
+    "summary": "Major Chinese bank.",
+    "explanation": "Similar governance concerns."
+  },
+  "agricultural_bank_of_china": {
+    "name": "Agricultural Bank of China",
+    "sector": "Finance",
+    "tier": "Weak",
+    "labor_risk": "High",
+    "sustainability": "Low",
+    "rating": 10,
+    "summary": "State-owned agricultural bank.",
+    "explanation": "Transparency and governance issues."
+  },
+  "ferrari": {
+    "name": "Ferrari",
+    "sector": "Automotive",
+    "tier": "Moderate",
+    "labor_risk": "Medium",
+    "sustainability": "Medium",
+    "rating": 50,
+    "summary": "Luxury sports car manufacturer.",
+    "explanation": "Environmental impact and exclusivity."
+  },
+  "prada": {
+    "name": "Prada",
+    "sector": "Luxury",
+    "tier": "Moderate",
+    "labor_risk": "High",
+    "sustainability": "Low",
+    "rating": 28,
+    "summary": "Luxury fashion brand.",
+    "explanation": "Supply chain and labor concerns."
+  },
+  "herm_s": {
+    "name": "HermÃ¨s",
+    "sector": "Luxury",
+    "tier": "Moderate",
+    "labor_risk": "Medium",
+    "sustainability": "Medium",
+    "rating": 49,
+    "summary": "Luxury goods producer.",
+    "explanation": "Material sourcing concerns."
+  },
+  "patagonia": {
+    "name": "Patagonia",
+    "sector": "Apparel",
+    "tier": "Leader",
+    "labor_risk": "Low",
+    "sustainability": "High",
+    "rating": 94,
+    "summary": "Outdoor clothing company focused on sustainability and activism.",
+    "explanation": "Extremely high score due to transparent supply chains, fair labor practices, and industry-leading environmental initiatives."
+  },
+  "eileen_fisher": {
+    "name": "Eileen Fisher",
+    "sector": "Apparel",
+    "tier": "Strong",
+    "labor_risk": "Low",
+    "sustainability": "High",
+    "rating": 88,
+    "summary": "Womenâ€™s fashion brand emphasizing ethical production and simplicity.",
+    "explanation": "Strong rating from responsible sourcing and sustainable materials, though smaller scale limits global impact."
+  },
+  "danone": {
+    "name": "Danone",
+    "sector": "Food & Bev",
+    "tier": "Strong",
+    "labor_risk": "Medium",
+    "sustainability": "High",
+    "rating": 78,
+    "summary": "Multinational food company producing dairy, water, and plant-based products.",
+    "explanation": "High sustainability efforts, but agricultural supply chains create moderate labor risk."
+  },
+  "oatly": {
+    "name": "Oatly",
+    "sector": "Food & Bev",
+    "tier": "Moderate",
+    "labor_risk": "Medium",
+    "sustainability": "High",
+    "rating": 72,
+    "summary": "Plant-based dairy alternative company focused on oat products.",
+    "explanation": "Strong environmental benefits compared to dairy, but transparency and investor-related concerns lower score slightly."
+  },
+  "costco": {
+    "name": "Costco",
+    "sector": "Retail",
+    "tier": "Strong",
+    "labor_risk": "Medium",
+    "sustainability": "Medium",
+    "rating": 74,
+    "summary": "Membership-based warehouse retailer operating globally.",
+    "explanation": "Higher rating due to relatively good worker treatment and wages, though supply chain oversight remains a challenge."
+  },
+  "ikea": {
+    "name": "IKEA",
+    "sector": "Retail",
+    "tier": "Strong",
+    "labor_risk": "Medium",
+    "sustainability": "High",
+    "rating": 79,
+    "summary": "Global furniture retailer known for affordable home products.",
+    "explanation": "Strong sustainability programs (renewable energy, circular design), but sourcing materials globally adds risk."
+  },
+  "bmw": {
+    "name": "BMW",
+    "sector": "Automotive",
+    "tier": "Moderate",
+    "labor_risk": "Medium",
+    "sustainability": "Mediumâ€“High",
+    "rating": 68,
+    "summary": "German automaker producing luxury and electric vehicles.",
+    "explanation": "Improved sustainability through EV transition, but manufacturing impact and supply chain issues remain."
+  },
+  "toyota": {
+    "name": "Toyota",
+    "sector": "Automotive",
+    "tier": "Moderate",
+    "labor_risk": "Medium",
+    "sustainability": "Medium",
+    "rating": 64,
+    "summary": "One of the worldâ€™s largest car manufacturers.",
+    "explanation": "Early hybrid leadership helps, but slower EV adoption and supply chain complexity limit score."
+  },
+  "chipotle": {
+    "name": "Chipotle",
+    "sector": "Food Service",
+    "tier": "Moderate",
+    "labor_risk": "Medium",
+    "sustainability": "Medium",
+    "rating": 67,
+    "summary": "Fast-casual restaurant chain focused on fresh ingredients.",
+    "explanation": "â€œFood with Integrityâ€ sourcing improves ethics, though scale and sourcing consistency are concerns."
+  },
+  "kering": {
+    "name": "Kering",
+    "sector": "Luxury",
+    "tier": "Strong",
+    "labor_risk": "Medium",
+    "sustainability": "High",
+    "rating": 83,
+    "summary": "Parent company of luxury brands like Gucci and Saint Laurent.",
+    "explanation": "Industry leader in sustainability reporting and environmental targets, with moderate supply chain risks."
+  },
+  "rsted": {
+    "name": "Ã˜rsted",
+    "sector": "Energy",
+    "tier": "Leader",
+    "labor_risk": "Low",
+    "sustainability": "High",
+    "rating": 93,
+    "summary": "Renewable energy company specializing in offshore wind power.",
+    "explanation": "One of the strongest sustainability performers globally due to full transition away from fossil fuels."
+  },
+  "nextera_energy": {
+    "name": "NextEra Energy",
+    "sector": "Energy",
+    "tier": "Strong",
+    "labor_risk": "Low",
+    "sustainability": "High",
+    "rating": 84,
+    "summary": "Major energy provider with a strong focus on wind and solar power.",
+    "explanation": "High score driven by renewable leadership, though still partially reliant on fossil fuels."
+  },
+  "boliden": {
+    "name": "Boliden",
+    "sector": "Mining",
+    "tier": "Moderate",
+    "labor_risk": "Medium",
+    "sustainability": "Medium",
+    "rating": 68,
+    "summary": "European mining and metals company.",
+    "explanation": "Better environmental and labor standards than many mining firms, but inherent industry risks remain."
+  },
+  "triodos_bank": {
+    "name": "Triodos Bank",
+    "sector": "Finance",
+    "tier": "Leader",
+    "labor_risk": "Low",
+    "sustainability": "High",
+    "rating": 92,
+    "summary": "Industry centered on tobacco production and sales.",
+    "explanation": "Low ethical rating due to health impacts and persistent social harm, regardless of company practices."
+  },
+  "ing_group": {
+    "name": "ING Group",
+    "sector": "Finance",
+    "tier": "Strong",
+    "labor_risk": "Low",
+    "sustainability": "Mediumâ€“High",
+    "rating": 74,
+    "summary": "Ethical bank that funds sustainable and social-impact projects.",
+    "explanation": "Very high score due to strict investment criteria and full transparency in financing."
+  }
+}
