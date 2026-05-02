@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VerityScore</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="search-container">
+  <input type="text" id="searchInput" placeholder="Search companies..." autocomplete="off" />
+  <div id="suggestions" class="suggestions"></div>
+</div>
+<div class="navbar">
+  <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+
+  <div class="nav-links" id="navLinks">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+
+    <div class="dropdown" id="dropdown">
+      <a class="dropdown-btn" onclick="toggleDropdown()">Services ▼</a>
+      <div class="dropdown-content">
+        <a href="#">Web Design</a>
+        <a href="#">SEO</a>
+        <a href="#">Marketing</a>
+      </div>
+    </div>
+
+    <a href="#">Contact</a>
+  </div>
+
+
+</div>
+<div id="resultContainer" class="result-container">
+  <h3>Welcome to VerityScore</h3>
+  <p>Search for a company to see its sector and ethical percentage rating.</p>
+  <p>
+    Ratings are based on analysis of the company's Human Rights Due Diligence (HRDD) tier, Child/Forced Labor Risk, and sustainability. The ratings are out of 100, with higher scores indicating better ethical practices. 
+  </p>
+  <h4>Ethical Ratings Breakdown:</h4>
+  <p> 80–100 → Very Ethical</p>
+  <p> 60–79 → Ethical</p>
+  
+  <p> 40–59 → Moderately Ethical</p>
+  <p> Below 40 → Unethical</p>
+  <h4> Additional Information Breakdown</h4>
+  <h5> HRDD Tier</h5>
+  <p>Leader = top performers in CHRB / strong policies + enforcement</p>
+  <p>Strong = good systems, decent transparency</p>
+  <p>Moderate = partial systems or inconsistent disclosure</p>
+  <p>Weak = poor transparency or known gaps</p>
+  <h5> Child/Forced Labor Risk</h5>
+  <p>Low = minimal risk based on industry and disclosures</p>
+  <p>Medium = some risk factors present, but mitigated</p>
+  <p>High = significant risk factors with limited mitigation</p>
+  <h5> Sustainability</h5>
+  <p>High = strong environmental policies, renewable energy use, waste reduction</p>
+  <p>Medium = some sustainability initiatives, but room for improvement</p>
+  <p>Low = limited sustainability efforts or negative environmental impact</p>
+  <h5>Notes: </h5>
+    <p>Finance companies are low risk cause they have fewer physical supply chains</p>
+    <p>For unethical companies and those ratings lower than 40, there are some more ethical alternatives provided.</p>
+</div>
+
+  <script type="module" src="script.js"></script>
+    
+  
+</body>
+</html>
