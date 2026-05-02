@@ -1,0 +1,1 @@
+console.log("Ethical Sourcing Tool is active on this page!");
