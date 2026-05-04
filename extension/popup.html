@@ -2,13 +2,30 @@
 <html>
 <head>
   <style>
-    body { width: 200px; padding: 10px; font-family: sans-serif; }
-    button { width: 100%; cursor: pointer; }
+    body { width: 300px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 15px; }
+    .header { border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 10px; }
+    .rating-circle { font-size: 24px; font-weight: bold; color: #e74c3c; }
+    .label { font-weight: bold; color: #555; font-size: 12px; text-transform: uppercase; }
+    .data-point { margin-bottom: 8px; }
+    .summary { font-style: italic; font-size: 13px; color: #333; background: #f9f9f9; padding: 8px; border-left: 3px solid #ccc; }
   </style>
 </head>
 <body>
-  <h3>Hello!</h3>
-  <button id="btn">Click Me</button>
+  <div class="header">
+    <h3 id="brand-name">Ethical Scan</h3>
+    <div id="rating-val" class="rating-circle">--</div>
+  </div>
+  
+  <div id="content">
+    <div class="data-point"><span class="label">Sector:</span> <span id="sector">--</span></div>
+    <div class="data-point"><span class="label">Labor Risk:</span> <span id="labor">--</span></div>
+    <div class="data-point"><span class="label">Tier:</span> <span id="tier">--</span></div>
+    <div class="label">Summary:</div>
+    <p id="summary" class="summary">Navigate to a supported site or search above.</p>
+    <div class="label">Explanation:</div>
+    <p id="explanation" style="font-size: 12px;"></p>
+  </div>
+
   <script src="popup.js"></script>
 </body>
 </html>

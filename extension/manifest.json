@@ -22,8 +22,8 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["brands.json"],
-      "matches": ["<all_urls>"]
+      "resources": ["*.json"],
+      "matches": ["*://*/*"]
     }
   ]
 }
