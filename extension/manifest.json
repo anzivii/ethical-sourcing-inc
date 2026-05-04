@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Ethical Sourcing Tool",
+  "version": "1.0",
+  "description": "Scans websites and alerts users to ethical sourcing ratings.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "mewo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["*.json"],
+      "matches": ["*://*/*"]
+    }
+  ]
+}
