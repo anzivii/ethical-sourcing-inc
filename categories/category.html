@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Category</title>
+  <link rel="stylesheet" href="category.css">
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+
+      <div class="dropdown">
+        <div class="dropdown-btn">Categories</div>
+
+        <div class="dropdown-content">
+
+          <div class="group">
+            <p class="group-title">Tech</p>
+            <a href="category.html?sector=Software">Software</a>
+            <a href="category.html?sector=Tech">Tech</a>
+            <a href="category.html?sector=Electronics">Electronics</a>
+            <a href="category.html?sector=Semiconductors">Semiconductors</a>
+          </div>
+
+          <div class="group">
+            <p class="group-title">Consumer</p>
+            <a href="category.html?sector=Retail">Retail</a>
+            <a href="category.html?sector=Apparel">Apparel</a>
+            <a href="category.html?sector=Luxury">Luxury</a>
+            <a href="category.html?sector=Beauty">Beauty</a>
+          </div>
+
+          <div class="group">
+            <p class="group-title">Food</p>
+            <a href="category.html?sector=Food%20%26%20Bev">Food & Bev</a>
+            <a href="category.html?sector=Food%20Service">Food Service</a>
+          </div>
+
+          <div class="group">
+            <p class="group-title">Industry</p>
+            <a href="category.html?sector=Manufacturing">Manufacturing</a>
+            <a href="category.html?sector=Mining">Mining</a>
+            <a href="category.html?sector=Energy">Energy</a>
+            <a href="category.html?sector=Logistics">Logistics</a>
+          </div>
+
+          <div class="group">
+            <p class="group-title">Health</p>
+            <a href="category.html?sector=Healthcare">Healthcare</a>
+            <a href="category.html?sector=Healthcare%20Tech">Healthcare Tech</a>
+          </div>
+
+          <div class="group">
+            <p class="group-title">Finance & Media</p>
+            <a href="category.html?sector=Finance">Finance</a>
+            <a href="category.html?sector=Media">Media</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="result-container">
+    <h2 id="category-title"></h2>
+
+    <table class="company-table">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Ethical Rating</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+  </div>
+
+  <script type="module" src="category.js"></script>
+</body>
+</html>

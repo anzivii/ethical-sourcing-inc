@@ -1,4 +1,4 @@
-import { companies } from "./dataset.js";
+import { companies } from "../website files/dataset.js";
 
 const input = document.getElementById("searchInput");
 const suggestions = document.getElementById("suggestions");
