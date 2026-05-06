@@ -292,3 +292,87 @@ input {
   font-weight: bold;
   margin-bottom: 10px;
 }
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #333;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+
+  z-index: 10000;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links a,
+.dropdown-btn {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.nav-links a:hover {
+  background: #575757;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* hidden by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background: #444;
+  min-width: 260px;
+  padding: 15px;
+
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+
+  z-index: 9999;
+}
+
+/* show on hover */
+.dropdown:hover .dropdown-content {
+  display: grid;
+}
+
+/* groups */
+.group-title {
+  color: #aaa;
+  font-size: 11px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.group a {
+  display: block;
+  font-size: 13px;
+  padding: 6px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+.group a:hover {
+  background: #666;
+}
