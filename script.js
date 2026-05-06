@@ -138,7 +138,6 @@ function showSuggestions() {
   });
 }
 
-// navbar stuff (unchanged)
 function toggleDropdown() {
   document.getElementById("dropdown").classList.toggle("show");
 }
