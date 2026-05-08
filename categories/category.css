@@ -185,12 +185,6 @@ input {
   background: rgba(220,232,223,0.6);
 }
 
-.company-table tr:hover {
-  background: rgba(200,220,210,0.9);
-  cursor: pointer;
-  transition: 0.2s;
-}
-
 .company-table td:nth-child(2),
 .company-table th:nth-child(2) {
   text-align: center;

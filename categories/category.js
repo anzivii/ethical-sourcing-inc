@@ -2,7 +2,6 @@ import { companies } from "../website files/dataset.js";
 
 const input = document.getElementById("searchInput");
 const suggestions = document.getElementById("suggestions");
-const resultContainer = document.getElementById("resultContainer");
 
 input.addEventListener("focus", showSuggestions);
 input.addEventListener("input", showSuggestions);
@@ -24,21 +23,19 @@ function showSuggestions() {
 
   filtered.slice(0, 8).forEach(company => {
     const div = document.createElement("div");
+
     div.classList.add("suggestion-item");
     div.textContent = company.name;
 
     div.addEventListener("click", () => {
-      input.value = company.name;
-      suggestions.style.display = "none";
 
-      resultContainer.style.display = "block";
-      const alternatives = getAlternatives(company);
+      // redirect to homepage with selected company
+      window.location.href =
+        `../website files/index2.html?company=${encodeURIComponent(company.name)}`;
+
     });
 
     suggestions.appendChild(div);
-    const script = document.createElement("script");
-    script.src = "../website files/script.js";
-    document.body.appendChild(script);
   });
 }
 
