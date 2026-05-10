@@ -1,3 +1,4 @@
+/* body styles: include font family and background color */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -11,6 +12,7 @@ body {
   background-size: cover;
 }
 
+/* search bar container */
 .search-container {
   position: relative;
   width: 320px;
@@ -18,6 +20,7 @@ body {
   margin-right: 80px;
 }
 
+/* search input styles */
 input {
   width: 100%;
   padding: 12px 14px;
@@ -28,6 +31,7 @@ input {
   box-shadow: 0 6px 15px rgba(0,0,0,0.12);
 }
 
+/* suggestions dropdown in search */
 .suggestions {
   position: absolute;
   width: 100%;
@@ -40,16 +44,18 @@ input {
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
+/* individual suggestions item in search */
 .suggestion-item {
   padding: 10px;
   cursor: pointer;
 }
 
+/* hover effect for suggestions in search */
 .suggestion-item:hover {
   background-color: #f2f2f2;
 }
 
-/* NAVBAR */
+/* nav bar css so its aesthetic */
 .navbar {
   position: fixed;
   top: 0;
@@ -63,10 +69,12 @@ input {
   z-index: 10000;
 }
 
+/* nav links container */
 .nav-links {
   display: flex;
 }
 
+/* nav links and dropdown button styles */
 .nav-links a,
 .dropdown-btn {
   color: white;
@@ -75,22 +83,24 @@ input {
   font-size: 13px;
 }
 
+/* hover effect for nav links and dropdown button */
 .nav-links a:hover {
   background: #575757;
 }
 
-/* DROPDOWN */
+/* nav bar dropdown */
 .dropdown {
   position: relative;
 }
 
+/* dropdown button styles */
 .dropdown-btn {
   cursor: pointer;
   display: flex;
   align-items: center;
 }
 
-/* hidden by default */
+/* dropdown content styles */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -104,15 +114,15 @@ input {
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
 
-  z-index: 9999;
+  z-index: 9999; 
 }
 
-/* show on hover */
+/* show dropdown content on hover */
 .dropdown:hover .dropdown-content {
   display: grid;
 }
 
-/* groups */
+/* dropdown group title styles */
 .group-title {
   color: #aaa;
   font-size: 11px;
@@ -120,6 +130,7 @@ input {
   text-transform: uppercase;
 }
 
+/* dropdown group link styles */
 .group a {
   display: block;
   font-size: 13px;
@@ -129,11 +140,12 @@ input {
   text-decoration: none;
 }
 
+/* hover effect for dropdown group links */
 .group a:hover {
   background: #666;
 }
 
-/* RESULT BOX */
+/* result container styles */
 .result-container {
   width: 60%;
   max-width: 700px;
@@ -151,12 +163,13 @@ input {
   box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
 
+/* category title styles */
 #category-title {
   margin-top: 0;
   color: #2F5D3A;
 }
 
-/* TABLE */
+/* company table styles */
 .company-table {
   width: 100%;
   border-collapse: collapse;
@@ -169,6 +182,7 @@ input {
   overflow: hidden;
 }
 
+/* company table header styles */
 .company-table th {
   background: #2F5D3A;
   color: white;
@@ -176,22 +190,25 @@ input {
   text-align: left;
 }
 
+/* company table cell styles */
 .company-table td {
   padding: 12px;
   color: #2e4d2e;
 }
 
+/* zebra striping for company table rows */
 .company-table tr:nth-child(even) {
   background: rgba(220,232,223,0.6);
 }
 
+/* center and bold the rating column in company table */
 .company-table td:nth-child(2),
 .company-table th:nth-child(2) {
   text-align: center;
   font-weight: bold;
 }
 
-/* RATINGS */
+/* rating color coding styles */
 .rating-high { color: #2F5D3A; font-weight: bold; }
 .rating-mid { color: #c49a00; font-weight: bold; }
 .rating-low { color: #b03a2e; font-weight: bold; }

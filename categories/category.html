@@ -6,22 +6,22 @@
   <link rel="stylesheet" href="category.css">
 </head>
 <body>
-
+<!-- Search Bar -->
     <div class="search-container">
     <input type="text" id="searchInput" placeholder="Search companies..." autocomplete="off" />
     <div id="suggestions" class="suggestions"></div>
   </div>
   <div id="searchResult" class="search-result"></div>
-
+  <!-- Navbar -->
   <div class="navbar">
     <div class="nav-links">
       <a href="../website files/index2.html">Home</a>
-
+      <!-- Categories Dropdown -->
       <div class="dropdown">
         <div class="dropdown-btn">Categories</div>
 
         <div class="dropdown-content">
-
+          <!-- Categories. we group them by industry -->
           <div class="group">
             <p class="group-title">Tech</p>
             <a href="category.html?sector=Software">Software</a>
@@ -69,6 +69,7 @@
     </div>
   </div>
 
+  <!-- Search Results -->
   <div class="result-container">
     <h2 id="category-title"></h2>
 
@@ -79,10 +80,10 @@
           <th>Ethical Rating</th>
         </tr>
       </thead>
-      <tbody id="table-body"></tbody>
-    </table>
+      <tbody id="table-body"></tbody> <!-- This is where the company data will be dynamically inserted based on the selected category and search query from js -->
+    </table> 
   </div>
 
-  <script type="module" src="category.js"></script>
+  <script type="module" src="category.js"></script> <!-- This script handles the search bar and populating the company table based on the selected category -->
 </body>
 </html>
