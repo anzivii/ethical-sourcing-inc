@@ -1,12 +1,15 @@
 import { companies } from "../website files/dataset.js";
 
+// search bar functionality, this is the same code as the search bar on the homepage, but we want to show suggestions on focus here as well since users might want to quickly jump to a different company category without going back to the homepage
 const input = document.getElementById("searchInput");
 const suggestions = document.getElementById("suggestions");
 const resultContainer = document.getElementById("resultContainer");
 
+// show suggestions when user focuses or types in the search bar (we want to show suggestions on focus so that users can see popular companies even before typing)
 input.addEventListener("focus", showSuggestions);
 input.addEventListener("input", showSuggestions);
 
+// getWidth function to determine the width of the progress bars based on the value (High, Strong, Moderate, Weak, Low)
 function getWidth(value) {
   if (value === "High" || value === "Leader") return 90;
   if (value === "Strong" || value === "Medium") return 70;
@@ -15,6 +18,7 @@ function getWidth(value) {
   return 40;
 }
 
+// getRatingLabel function to determine the label for the ethical score based on the score value
 function getRatingLabel(score) {
   if (score >= 80) return "Very Ethical";
   if (score >= 60) return "Ethical";
@@ -22,6 +26,7 @@ function getRatingLabel(score) {
   return "Unethical";
 }
 
+// getAlternatives function to find better alternatives in the same sector with a rating above 50, excluding the current company
 function getAlternatives(company) {
   return companies
     .filter(c =>
