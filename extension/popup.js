@@ -1,16 +1,16 @@
 async function loadPopupData() {
-  // 1. Get the current active tab
+  // acquire current tab ☝️🤓
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
   if (!tab.url) return;
   
   const url = new URL(tab.url);
   const hostname = url.hostname.toLowerCase();
 
-  // 2. LOAD THE DATABASE (This was missing in your draft)
+  // load database
   const response = await fetch(chrome.runtime.getURL('brands.json'));
   const brands = await response.json();
 
-  // 3. NEW ROBUST MATCHING LOGIC
+  // matching logic to check url
   const match = Object.keys(brands).find(key => {
     const flatKey = key.replace(/\s+/g, '');
     const firstPart = key.split(' ')[0];
@@ -20,7 +20,7 @@ async function loadPopupData() {
            hostname.includes(firstPart);
   });
 
-  // 4. Fill the HTML
+  // aurafarming by displaying data in popup
   if (match) {
     const data = brands[match];
     document.getElementById('brand-name').innerText = data.name;

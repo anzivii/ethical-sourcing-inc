@@ -1,15 +1,15 @@
-// 1. Load the database
+// load the database of #knowledge and #research (MIGHT be inaccurate)
 fetch(chrome.runtime.getURL('brands.json'))
   .then(response => response.json())
   .then(brands => {
-    // NEW ROBUST MATCHING LOGIC
+    // matching logic to check url
 const hostname = window.location.hostname.toLowerCase();
 
 const match = Object.keys(brands).find(key => {
   // 1. Remove spaces from the brand key (e.g., "cvs health" -> "cvshealth")
   const flatKey = key.replace(/\s+/g, '');
   
-  // 2. Check if the URL contains the brand name (e.g., "cvs.com" contains "cvs")
+  // check if site has the brand name
   // Or if the brand name contains the URL (e.g., "cvs health" contains "cvs")
   const firstPart = key.split(' ')[0]; // Gets "cvs" from "cvs health"
   
@@ -18,19 +18,18 @@ const match = Object.keys(brands).find(key => {
          hostname.includes(firstPart);
 });
 
-// 4. Create the visual "Flag" on the website
+//  create the banner!! hooray
 function displayAlert(company) {
-  // Create a container and attach it to the very top of the body
   const container = document.createElement('div');
-  container.style.all = 'initial'; // Reset all inherited styles
+  container.style.all = 'initial';
   document.body.prepend(container);
 
-  // Create the Shadow Root
+  // make shadow root for style encapsulation
   const shadow = container.attachShadow({mode: 'open'});
 
   const color = company.rating > 70 ? '#2ecc71' : (company.rating > 40 ? '#f1c40f' : '#e74c3c');
 
-  // Inject the banner into the Shadow Root
+  // put banner into shadow root
   shadow.innerHTML = `
     <style>
       .ethical-banner {
