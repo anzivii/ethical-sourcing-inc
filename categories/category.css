@@ -1,0 +1,214 @@
+/* body styles: include font family and background color */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding-top: 70px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: url('../website files/image.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* search bar container */
+.search-container {
+  position: relative;
+  width: 320px;
+  align-self: flex-end;
+  margin-right: 80px;
+}
+
+/* search input styles */
+input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+/* suggestions dropdown in search */
+.suggestions {
+  position: absolute;
+  width: 100%;
+  background: white;
+  border-radius: 0 0 10px 10px;
+  max-height: 160px;
+  overflow-y: auto;
+  display: none;
+  z-index: 1000;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* individual suggestions item in search */
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* hover effect for suggestions in search */
+.suggestion-item:hover {
+  background-color: #f2f2f2;
+}
+
+/* nav bar css so its aesthetic */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #333;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+
+  z-index: 10000;
+}
+
+/* nav links container */
+.nav-links {
+  display: flex;
+}
+
+/* nav links and dropdown button styles */
+.nav-links a,
+.dropdown-btn {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/* hover effect for nav links and dropdown button */
+.nav-links a:hover {
+  background: #575757;
+}
+
+/* nav bar dropdown */
+.dropdown {
+  position: relative;
+}
+
+/* dropdown button styles */
+.dropdown-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* dropdown content styles */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background: #444;
+  min-width: 260px;
+  padding: 15px;
+
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+
+  z-index: 9999; 
+}
+
+/* show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: grid;
+}
+
+/* dropdown group title styles */
+.group-title {
+  color: #aaa;
+  font-size: 11px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+/* dropdown group link styles */
+.group a {
+  display: block;
+  font-size: 13px;
+  padding: 6px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+/* hover effect for dropdown group links */
+.group a:hover {
+  background: #666;
+}
+
+/* result container styles */
+.result-container {
+  width: 60%;
+  max-width: 700px;
+  min-width: 320px;
+
+  margin-top: 20px;
+  padding: 25px;
+
+  border-radius: 16px;
+
+  background: rgba(195, 213, 189, 0.75);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(173, 192, 181, 0.6);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+/* category title styles */
+#category-title {
+  margin-top: 0;
+  color: #2F5D3A;
+}
+
+/* company table styles */
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(12px);
+
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* company table header styles */
+.company-table th {
+  background: #2F5D3A;
+  color: white;
+  padding: 14px;
+  text-align: left;
+}
+
+/* company table cell styles */
+.company-table td {
+  padding: 12px;
+  color: #2e4d2e;
+}
+
+/* zebra striping for company table rows */
+.company-table tr:nth-child(even) {
+  background: rgba(220,232,223,0.6);
+}
+
+/* center and bold the rating column in company table */
+.company-table td:nth-child(2),
+.company-table th:nth-child(2) {
+  text-align: center;
+  font-weight: bold;
+}
+
+/* rating color coding styles */
+.rating-high { color: #2F5D3A; font-weight: bold; }
+.rating-mid { color: #c49a00; font-weight: bold; }
+.rating-low { color: #b03a2e; font-weight: bold; }

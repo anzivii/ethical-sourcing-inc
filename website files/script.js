@@ -1,12 +1,15 @@
-import { companies } from "./dataset.js";
+import { companies } from "../website files/dataset.js";
 
+// search bar functionality, this is the same code as the search bar on the homepage, but we want to show suggestions on focus here as well since users might want to quickly jump to a different company category without going back to the homepage
 const input = document.getElementById("searchInput");
 const suggestions = document.getElementById("suggestions");
 const resultContainer = document.getElementById("resultContainer");
 
+// show suggestions when user focuses or types in the search bar (we want to show suggestions on focus so that users can see popular companies even before typing)
 input.addEventListener("focus", showSuggestions);
 input.addEventListener("input", showSuggestions);
 
+// getWidth function to determine the width of the progress bars based on the value (High, Strong, Moderate, Weak, Low)
 function getWidth(value) {
   if (value === "High" || value === "Leader") return 90;
   if (value === "Strong" || value === "Medium") return 70;
@@ -15,6 +18,7 @@ function getWidth(value) {
   return 40;
 }
 
+// getRatingLabel function to determine the label for the ethical score based on the score value
 function getRatingLabel(score) {
   if (score >= 80) return "Very Ethical";
   if (score >= 60) return "Ethical";
@@ -22,6 +26,7 @@ function getRatingLabel(score) {
   return "Unethical";
 }
 
+// getAlternatives function to find better alternatives in the same sector with a rating above 50, excluding the current company
 function getAlternatives(company) {
   return companies
     .filter(c =>
@@ -138,7 +143,6 @@ function showSuggestions() {
   });
 }
 
-// navbar stuff (unchanged)
 function toggleDropdown() {
   document.getElementById("dropdown").classList.toggle("show");
 }
@@ -155,3 +159,110 @@ window.onclick = function(e) {
     }
   }
 };
+
+const params = new URLSearchParams(window.location.search);
+const selectedCompany = params.get("company");
+
+if (selectedCompany) {
+
+  const company = companies.find(
+    c => c.name.toLowerCase() === selectedCompany.toLowerCase()
+  );
+
+  if (company) {
+
+    input.value = company.name;
+
+    const alternatives = getAlternatives(company);
+
+    resultContainer.style.display = "block";
+
+    resultContainer.innerHTML = `
+      <div class="card">
+
+        <div class="card-header">
+          <h2>${company.name}</h2>
+
+          <div class="score-wrapper">
+            <div class="score-circle" style="--score:${company.rating}">
+              ${company.rating}
+            </div>
+
+            <p class="score-label">
+              Ethical Score • ${getRatingLabel(company.rating)}
+            </p>
+          </div>
+        </div>
+
+        <p class="sector"> Sector: ${company.sector}</p> <br>
+
+        <div class="bars">
+
+          <div class="bar">
+            <div class="bar-top">
+              <span>HRDD</span>
+              <span class="value">${company.hrdd}</span>
+            </div>
+
+            <div class="progress">
+              <div style="width: ${getWidth(company.hrdd)}%"></div>
+            </div>
+          </div>
+
+          <div class="bar">
+            <div class="bar-top">
+              <span>Labor Risk</span>
+              <span class="value">${company.laborRisk}</span>
+            </div>
+
+            <div class="progress">
+              <div style="width: ${getWidth(company.laborRisk)}%"></div>
+            </div>
+          </div>
+
+          <div class="bar">
+            <div class="bar-top">
+              <span>Sustainability</span>
+              <span class="value">${company.sustainability}</span>
+            </div>
+
+            <div class="progress">
+              <div style="width: ${getWidth(company.sustainability)}%"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="extra-info">
+          <h4>Summary</h4>
+          <p>${company.summary}</p>
+
+          <h4>Explanation</h4>
+          <p>${company.explanation}</p>
+        </div>
+
+      </div>
+
+      ${company.rating < 40 ? `
+        <p class="warning">
+          ⚠️ This company has low ethical performance
+        </p>
+
+        <div class="alternatives">
+          <h4>Better Alternatives</h4>
+
+          ${alternatives.length > 0
+            ? alternatives.map(alt => `
+              <div class="alt-card">
+                <strong>${alt.name}</strong> (${alt.rating})
+                <p>${alt.summary}</p>
+              </div>
+            `).join("")
+            : `<p>No better alternatives found.</p>`
+          }
+
+        </div>
+      ` : ""}
+    `;
+  }
+}
